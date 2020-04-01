@@ -9,11 +9,12 @@
 </head>
 <body style="background-color: #F1F1F1">
     <nav class="navbar" role="navigation" aria-label="main navigation">
+        
         <div class="navbar-brand">
             <a class="navbar-item" id="logo" href="index.html">
                 YO RENTO
             </a>
-    
+           
             <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
                 data-target="navbarBasicExample">
                 <span aria-hidden="true"></span>
@@ -24,6 +25,10 @@
     
         <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-start">
+                <div class="perfil">
+                    <img src="img/profile.jpg" alt="profile-picture" style="width: 50px">
+                    <span>Marv3</span>
+                </div>
                 <a class="navbar-item">
                     Mis rentas
                 </a>
@@ -37,11 +42,39 @@
             </div>
         </div>
     </nav>
-    <div class="container">
-        <div class="contenedor">
+    <div class="grid">
+<div class="item-pc">
+    <h1 onclick="location.href='index.html'">
+        <a >
+            YO RENTO
+        </a></h1>
+    <nav class="menu">
+        <div class="perfil">
+            <img src="img/profile.jpg" alt="profile-picture" style="width: 50px">
+            <span>Marv3</span>
+        </div>
+        <br>
+        <ul>
+            <li onclick="location.href='#'">
+                <div></div>
+                Mis Rentas
+            </li>
+            <li onclick="location.href='index.html'">
+                <div class="activo"></div>
+                Inicio
+            </li>
+            <li>
+                <div></div>
+                Quienes somos
+            </li>
+        </ul>
+    </nav>
+</div>
+        <div class="container">
+            <div class="contenedor">
 
             <section class="hero has-text-centered">
-                <h1>ELIGUE TU MEDIO DE TRANSPORTE </h1>
+                <h1>ELIGUE TU MEDIO DE TRANSPORTE</h1>
             </section>
             <div class="categorias">
                 <div onclick="location.href='aereo.html'" class="cat aereo has-text-centered">AÉREO</div>
@@ -50,6 +83,7 @@
             </div>
         </div>
     </div>
+</div>
     </div>
     <script>
         document.addEventListener('DOMContentLoaded', () => {

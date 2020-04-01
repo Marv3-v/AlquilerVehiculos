@@ -23,13 +23,14 @@ $background: #F1F1F1
     font-size: 25px
     color: $brown
 
-.container > .hero > h1 
+.contenedor > .hero > h1 
     font-family: "MontBold"
     color: $titleColor
+    font-size: 18px
 
 .container
     color: $titleColor
-    font-family: "MontBold"
+    
     margin-top: 20%
 
 .contenedor 
@@ -38,6 +39,7 @@ $background: #F1F1F1
 
 body 
     font-family: "MontRegular" !important
+    height: 100vh
 
 .categorias 
     font-family: "MontRegular"
@@ -48,12 +50,13 @@ body
     flex-direction: column
 
 .cat 
-    padding: 16px
+    padding: 10px
     border-radius: 20px
     margin: 10px
 
 .cat:hover
     cursor: pointer
+    background-color: $titleColor
 
 .aereo
     background: $airColor
@@ -64,20 +67,115 @@ body
 .maritimo
     background: $seaColor
 
-    
+.grid 
+    height: 100vh
+
+.grid > .item-pc
+    display: none
+
+.navbar-start > .perfil 
+    diplay: flex
+    justify-content: space-around
+    flex-direction: column
+
+.navbar-start > .perfil img
+    border-radius: 70%
+    margin-left: 9%
+
 @media only screen and (min-width: 600px)
     //tablets
 
 
 @media only screen and (min-width: 768px)
     //pc
+    .contenedor > .hero h1
+        font-family: "MontBold"
+        font-size: 23px
+
+    .contenedor > .hero h1:hover
+        cursor: pointer
+
+    .contenedor 
+        margin-left: 5%
+        margin-right: 5%
+
     .container 
         font-family: "MontRegular"
         margin-top: 5%
-        font-size: 25px
+        font-size: 23px
     .navbar
         display: none
 
     .categorias 
         margin-top: 10%
         font-size: 20px
+    
+    .grid > .item-pc
+        display: block
+        background-color: white
+       
+    .grid 
+        display: grid
+        grid-template-columns: 22% 1fr
+
+    .item-pc 
+         box-shadow: 0px 0px 10px #888888
+         
+    
+    .menu > ul > li
+        padding: 1em 0em 1em 2em
+
+    .menu > ul > li:hover 
+        color: black
+
+    .menu > ul > li
+        display: flex
+
+    .menu > ul > li > .activo
+        background: black
+        padding-left: 1em 
+        padding-right: .5em 
+        margin: 5px
+        font-weight: bold
+
+    .menu > ul > li
+        margin: -5px
+        
+    .menu > ul > li:hover 
+        cursor: pointer
+        background-color:#fafafa
+        
+    .menu > ul > li:hover div
+        background: black
+        padding-left: 1em
+        padding-right: .5em
+        margin: 5px
+        width: 25px
+        cursor: pointer
+        transition: margin .5s
+        
+    
+    .item-pc > h1
+        font-family: "MontBold"
+        font-size: 23px
+        text-align: center
+        margin-top: 15%
+    
+    .item-pc > h1 > a 
+        color: $brown
+    
+    .item-pc > .menu > .perfil > img
+        border-radius: 70%
+        margin-left: 9%
+        
+
+    .item-pc > .menu > .perfil
+        diplay: flex
+        justify-content: space-around
+        flex-direction: column
+
+    .item-pc > .menu > .perfil > span
+        margin-left: 10%
+        padding-top: -20px
+
+  
