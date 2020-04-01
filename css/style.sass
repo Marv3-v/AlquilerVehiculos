@@ -1,0 +1,83 @@
+//color palette
+$brown: #B35C59
+$titleColor: #FF9D9A
+$airColor: #568CB8
+$seaColor: #7DC5FF
+$background: #F1F1F1
+
+
+@font-face 
+    font-family: "Hansief"
+    src: url("/fonts/Hansief.otf")
+
+@font-face 
+    font-family: "MontRegular" 
+    src: url("/fonts/Montserrat-Regular.otf")
+
+@font-face 
+    font-family: "MontBold" 
+    src: url("/fonts/Montserrat-Bold.otf")
+
+#logo
+    font-family: "Hansief"
+    font-size: 25px
+    color: $brown
+
+.container > .hero > h1 
+    font-family: "MontBold"
+    color: $titleColor
+
+.container
+    color: $titleColor
+    font-family: "MontBold"
+    margin-top: 20%
+
+.contenedor 
+    margin-left: 10%
+    margin-right: 10%
+
+body 
+    font-family: "MontRegular" !important
+
+.categorias 
+    font-family: "MontRegular"
+    color: white
+    display: flex
+    margin-top: 20%
+    justify-content: center
+    flex-direction: column
+
+.cat 
+    padding: 16px
+    border-radius: 20px
+    margin: 10px
+
+.cat:hover
+    cursor: pointer
+
+.aereo
+    background: $airColor
+
+.terrestre
+    background: $brown
+
+.maritimo
+    background: $seaColor
+
+    
+@media only screen and (min-width: 600px)
+    //tablets
+
+
+@media only screen and (min-width: 768px)
+    //pc
+    .container 
+        font-family: "MontRegular"
+        margin-top: 5%
+        font-size: 25px
+    .navbar
+        display: none
+
+    .categorias 
+        margin-top: 10%
+        font-size: 20px
