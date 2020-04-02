@@ -52,6 +52,11 @@ body {
   margin: 10px;
 }
 
+@keyframes notice-me {
+  100% {
+    background-color: #FF9D9A;
+  }
+}
 .cat:hover {
   cursor: pointer;
   background-color: #FF9D9A;
@@ -59,14 +64,17 @@ body {
 
 .aereo {
   background: #568CB8;
+  animation: 0.5s notice-me;
 }
 
 .terrestre {
   background: #B35C59;
+  animation: 1s notice-me;
 }
 
 .maritimo {
   background: #7DC5FF;
+  animation: 1.5s notice-me;
 }
 
 .grid {

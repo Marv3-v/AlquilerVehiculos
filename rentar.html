@@ -80,12 +80,37 @@
                 <div class="seccion air has-text-centered">Llene sus condiciones</div>
                 <br>
                 <div class="content" style="text-align: left; font-weight: normal;">
-                    <div class="field">
-                        <label class="label">Marca</label>
-                        <div class="control">
-                            <input class="input is-rounded" id='marca' type="text" placeholder="Marca del transporte">
+                <div class="field">
+                    <label class="label">Año</label>
+                    <div class="control">
+                        <div class="select is-fullwidth is-rounded">
+                            <select id="anio">
+                                <option class="is-rounded" selected disabled>Seleccione un año</option>
+                                <option value="2010">2010</option>
+                                <option value="2011">2011</option>
+                                <option value="2012">2012</option>
+                                <option value="2013">2013</option>
+                                <option value="2014">2014</option>
+                                <option value="2015">2015</option>
+                                <option value="2016">2016</option>
+                                <option value="2017">2017</option>
+                                <option value="2018">2018</option>
+                                <option value="2019">2019</option>
+                                <option value="2020">2020</option>
+                            </select>
                         </div>
                     </div>
+                </div>
+                <div class="field">
+                    <label class="label">Motor</label>
+                    <div class="control">
+                        <div class="select is-fullwidth is-rounded">
+                            <select id="motor">
+                                <option class="is-rounded" selected disabled>Seleccione tipo motor</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
                     <div class="field">
                         <label class="label">Cant. de personas</label>
                         <div class="control">
@@ -98,18 +123,19 @@
                             <div class="select is-fullwidth is-rounded">
                                 <select id="color">
                                     <option class="is-rounded" selected disabled>Seleccione el color</option>
-                                    <option class="is-rounded">With options</option>
                                 </select>
                             </div>
                         </div>
                     </div>
                     <div class="field">
-                        <label class="label">Tiempo</label>
+                        <label class="label">Formato de Tiempo</label>
                         <div class="control">
                             <div class="select is-fullwidth is-rounded">
                                 <select id="color">
-                                    <option class="is-rounded">Select el formato</option>
-                                    <option class="is-rounded">With options</option>
+                                    <option class="is-rounded">Seleccione el formato</option>
+                                    <option value="hora">Horas</option>
+                                    <option value="dia">Días</option>
+                                    <option value="semana">Semanas</option>
                                 </select>
                             </div>
                         </div>
@@ -133,19 +159,7 @@
     </div>
     </div>
     <!-- modal -->
-    <div class="modal" id='rentDetail'>
-        <div class="modal-background"></div>
-        <div class="modal-content">
-            <div class="box">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa
-                fringilla egestas. Nullam condimentum luctus turpis. </div>
-        </div>
-        <button class="modal-close is-large" aria-label="close"></button>
-    </div>
-    <script>
-        document.querySelector('#buttonRentar').click(function(){
-            document.querySelector("#rentDetail").addClass('is-active');
-        });
-    </script>
+    <script src="js/script.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
 

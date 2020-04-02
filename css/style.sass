@@ -5,17 +5,11 @@ $airColor: #568CB8
 $seaColor: #7DC5FF
 $background: #F1F1F1
 
-@mixin categoria-style()
-    font-family: "MontRegular"
-    color: white
-    display: flex
-    margin-top: 20%
-    justify-content: center
-    flex-direction: column
-
 @font-face 
     font-family: "Hansief"
     src: url("/fonts/Hansief.otf")
+    src: url('/fonts/hansief-webfont.woff2') format('woff2')
+    src: url('/fonts/hansief-webfont.woff') format('woff')
 
 @font-face 
     font-family: "MontRegular" 
@@ -24,6 +18,16 @@ $background: #F1F1F1
 @font-face 
     font-family: "MontBold" 
     src: url("/fonts/Montserrat-Bold.otf")
+
+@mixin categoria-style()
+    font-family: "MontRegular"
+    color: white
+    display: flex
+    margin-top: 20%
+    justify-content: center
+    flex-direction: column
+
+
 //3
 //tamanio titulo
 @function get-title-size()
@@ -47,9 +51,12 @@ $background: #F1F1F1
     color: $titleColor
     font-size: get-title-size()
 
+
 .container
     color: $titleColor
     margin-top: 20%
+
+
 
 .contenedor 
     margin-left: get-margin()
@@ -67,18 +74,29 @@ body
     border-radius: 20px
     margin: 10px
 
+@keyframes notice-me
+    100%
+        background-color: $titleColor
+        
+
 .cat:hover
     cursor: pointer
     background-color: $titleColor
 
 .aereo
     background: $airColor
+    animation: .5s notice-me
+
 
 .terrestre
     background: $brown
+    animation: .8s notice-me
+
 
 .maritimo
     background: $seaColor
+    animation: 1s notice-me
+
 
 .grid 
     height: 100vh

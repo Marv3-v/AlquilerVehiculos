@@ -17,10 +17,21 @@
 
 .sea 
     background-color: $seaColor
-
+//animacion 1 agrega delay a la carga del contenido
 .container 
     margin-left: 10%
     margin-right: 10%
+    animation: 1s loading
+
+.content
+    animation: 2s loading
+
+@keyframes loading
+    0%
+        opacity: 0
+    100%
+        opacity: 1
+        
 
 
 //Imagenes y tarjetas redondas
@@ -32,9 +43,21 @@
     border-top-right-radius: 20px
 
 //hover images
+//2 transiciones y 1 transform
+.card 
+    transition: .7s transform
 .card:hover
     cursor: pointer
+    transform: scale(1.05)
 
+.card:hover .card-image
+    opacity: .5
+    transition: 1s opacity
+    
+.card:not(hover) .card-image
+    opacity: 1
+    transition: 2s opacity
+    
 .volver
     margin-left: 90%
     margin-top: -20px
@@ -50,6 +73,22 @@
 .logo-contact
     font-size: 35px
 
+#faq
+    animation: 1s coloring infinite
+//Animacion 05 resalta las FAQ
+    //transform 2 hace texto grande
+        //transform 3 hace texto peque;o
+@keyframes coloring
+    0%
+        color: $airColor
+        transform: scale(1.2)
+    50%
+        color: $brown
+
+    100%
+        color: $titleColor
+        transform: scale(.5)
+        
 @media only screen and (min-width: 768px)
     .seccion
         padding: 10px

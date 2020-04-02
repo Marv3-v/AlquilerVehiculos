@@ -1,6 +1,8 @@
 @font-face {
   font-family: "Hansief";
   src: url("/fonts/Hansief.otf");
+  src: url("/fonts/hansief-webfont.woff2") format("woff2");
+  src: url("/fonts/hansief-webfont.woff") format("woff");
 }
 @font-face {
   font-family: "MontRegular";
@@ -52,6 +54,11 @@ body {
   margin: 10px;
 }
 
+@keyframes notice-me {
+  100% {
+    background-color: #FF9D9A;
+  }
+}
 .cat:hover {
   cursor: pointer;
   background-color: #FF9D9A;
@@ -59,14 +66,17 @@ body {
 
 .aereo {
   background: #568CB8;
+  animation: 0.5s notice-me;
 }
 
 .terrestre {
   background: #B35C59;
+  animation: 0.8s notice-me;
 }
 
 .maritimo {
   background: #7DC5FF;
+  animation: 1s notice-me;
 }
 
 .grid {
@@ -218,8 +228,21 @@ body {
 .container {
   margin-left: 10%;
   margin-right: 10%;
+  animation: 1s loading;
 }
 
+.content {
+  animation: 2s loading;
+}
+
+@keyframes loading {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .is-rounded {
   border-radius: 20px;
 }
@@ -229,8 +252,23 @@ body {
   border-top-right-radius: 20px;
 }
 
+.card {
+  transition: 0.7s transform;
+}
+
 .card:hover {
   cursor: pointer;
+  transform: scale(1.05);
+}
+
+.card:hover .card-image {
+  opacity: 0.5;
+  transition: 1s opacity;
+}
+
+.card:not(hover) .card-image {
+  opacity: 1;
+  transition: 2s opacity;
 }
 
 .volver {
@@ -252,6 +290,23 @@ body {
   font-size: 35px;
 }
 
+#faq {
+  animation: 1s coloring infinite;
+}
+
+@keyframes coloring {
+  0% {
+    color: #568CB8;
+    transform: scale(1.2);
+  }
+  50% {
+    color: #B35C59;
+  }
+  100% {
+    color: #FF9D9A;
+    transform: scale(0.5);
+  }
+}
 @media only screen and (min-width: 768px) {
   .seccion {
     padding: 10px;
