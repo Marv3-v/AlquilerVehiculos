@@ -35,6 +35,16 @@
   color: white;
 }
 
+.tierra {
+  background: #B35C59;
+  color: white;
+}
+
+.mar {
+  background: #7DC5FF;
+  color: white;
+}
+
 @media only screen and (min-width: 768px) {
   .container {
     font-size: 18px;

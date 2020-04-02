@@ -1,6 +1,6 @@
 @import 'style.sass'
 .seccion
-    padding: 10px
+    padding: 5px
     padding-left: 50px
     padding-right: 50px
     border-radius: 20px
@@ -42,20 +42,28 @@
 .volver:hover
     cursor: pointer
 
+@media (min-width:768px)
+    .container 
+        margin-left: 0%
+        margin-right: 20%
+
+.logo-contact
+    font-size: 35px
 
 @media only screen and (min-width: 768px)
     .seccion
-        padding: 5px
-        padding-left: 100px
-        padding-right: 100px
+        padding: 10px
         border-radius: 20px
-        margin: 10px
+        margin: 20px
         font-family: "MontRegular"
         color: white
 
     .container 
-        margin-left: 30%
-        margin-right: 30%
+        margin-left: 25%
+        margin-right: 25%
 
     .volver
-        margin-left: 140%
+        margin-left: 120%
+
+    .logo-contact
+        font-size: 45px

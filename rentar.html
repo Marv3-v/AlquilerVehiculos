@@ -40,7 +40,7 @@
                 <a class="navbar-item" href="index.html">
                     Inicio
                 </a>
-                <a class=" navbar-item" href="contact.html">
+                <a class="navbar-item" href="contact.html">
                     Quienes somos
                 </a>
             </div>
@@ -68,43 +68,84 @@
                         Inicio
                     </li>
                     <li>
-                        <div class="activo"></div>
+                        <div></div>
                         Quienes somos
                     </li>
                 </ul>
             </nav>
         </div>
-        <div class="lal">
             <div class="container">
-                <div class="has-text-centered logo-contact" id="logo" style="font-size: 55px;">YO RENTO</div>
+                <span class="volver" onclick="location.href='aereoShow.html'">Volver</span>
+
+                <div class="seccion air has-text-centered">Llene sus condiciones</div>
                 <br>
+                <div class="content" style="text-align: left; font-weight: normal;">
+                    <div class="field">
+                        <label class="label">Marca</label>
+                        <div class="control">
+                            <input class="input is-rounded" id='marca' type="text" placeholder="Marca del transporte">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Cant. de personas</label>
+                        <div class="control">
+                            <input class="input is-rounded" id='cant' type="number" placeholder="Cant.">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Color</label>
+                        <div class="control">
+                            <div class="select is-fullwidth is-rounded">
+                                <select id="color">
+                                    <option class="is-rounded" selected disabled>Seleccione el color</option>
+                                    <option class="is-rounded">With options</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Tiempo</label>
+                        <div class="control">
+                            <div class="select is-fullwidth is-rounded">
+                                <select id="color">
+                                    <option class="is-rounded">Select el formato</option>
+                                    <option class="is-rounded">With options</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Plazo</label>
+                        <div class="control">
+                            <input class="input is-rounded" id='plazo' type="number" placeholder="Plazo.">
+                        </div>
+                    </div>
+                    <div class="field" style="text-align: center;">
+                        <p class="control" style="text-align: center;">
+                            <button class="button is-success" id="buttonRentar" style="text-align: center;">
+                                Rentar
+                            </button>
+                        </p>
+                    </div>
+                    <br><br>
+                </div>
             </div>
-            <div class="content">
-                <h4>Misión</h4>
-                <p style="text-align: justify;">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut nihil illo pariatur iure autem blanditiis nulla corrupti. Fuga quaerat nihil sint, earum quia vel minus, autem expedita dolores tempora ut.
-                </p>
-                <h4>Visión</h4>
-                <p style="text-align: justify;">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut nihil illo pariatur iure autem blanditiis nulla
-                    corrupti. Fuga quaerat nihil sint, earum quia vel minus, autem expedita dolores tempora ut.
-                </p>
-                <h4>FAQ</h4>
-                <p style="text-align: justify;">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut nihil illo pariatur iure autem blanditiis nulla
-                    corrupti. Fuga quaerat nihil sint, earum quia vel minus, autem expedita dolores tempora ut.
-                </p>
-                <br><br>
-                <div class="has-text-centered logo-contact" id="logo">CONTÁCTANOS</div>
-                <br>
-                <textarea class="textarea" name="" id="" cols="30" rows="10"></textarea>
-                <br>
-                <!-- boton para enviar correo -->
-                <span class="rentar aire">Enviar correo</span>
-            </div>
+    </div>
+    </div>
+    <!-- modal -->
+    <div class="modal" id='rentDetail'>
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <div class="box">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa
+                fringilla egestas. Nullam condimentum luctus turpis. </div>
         </div>
+        <button class="modal-close is-large" aria-label="close"></button>
     </div>
-    </div>
+    <script>
+        document.querySelector('#buttonRentar').click(function(){
+            document.querySelector("#rentDetail").addClass('is-active');
+        });
+    </script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
 
