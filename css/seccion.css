@@ -139,7 +139,7 @@ body {
   }
 
   .menu > ul > li > .activo {
-    background: black;
+    background: #568CB8;
     padding-left: 1em;
     padding-right: 0.5em;
     margin: 5px;
@@ -156,7 +156,7 @@ body {
   }
 
   .menu > ul > li:hover div {
-    background: black;
+    background: #568CB8;
     padding-left: 1em;
     padding-right: 0.5em;
     margin: 5px;
