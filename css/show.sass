@@ -1,0 +1,58 @@
+//1
+@mixin background-air-color()
+    background: #568CB8
+//2
+@mixin background-earth-color()
+    background: #B35C59
+//3
+@mixin background-sea-color()
+    background: #7DC5FF
+//4
+@mixin button-style()
+    padding: 10px
+    padding-left: 20px
+    padding-right: 20px
+    border-radius: 20px
+
+//functions
+//1
+@function get-padding()
+    @return 15 + px
+//2
+@function get-side-padding()
+    @return 30 + px
+
+.content
+    width: 80%
+    margin-left: 10%
+    text-align: center
+
+.content > p
+    text-align: justify
+    
+
+.content > img
+    height: 400px
+    
+.rentar
+    @include button-style()
+    @media only screen and (min-width: 768px)
+        padding: get-padding()
+        padding-left: get-side-padding()
+        padding-right: get-side-padding()      
+
+.rentar:hover
+    cursor: pointer
+    
+.aire
+    @include background-air-color()
+    color: white
+    
+    
+.container
+    @media only screen and (min-width: 768px)
+        font-size: 18px
+
+.content > img
+    @media only screen and (min-width: 768px)
+        height: 900px

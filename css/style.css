@@ -77,12 +77,6 @@ body {
   display: none;
 }
 
-.navbar-start > .perfil {
-  diplay: flex;
-  justify-content: space-around;
-  flex-direction: column;
-}
-
 .navbar-start > .perfil img {
   border-radius: 70%;
   margin-left: 9%;
@@ -125,7 +119,7 @@ body {
 
   .grid {
     display: grid;
-    grid-template-columns: 22% 1fr;
+    grid-template-columns: 25% 1fr;
   }
 
   .item-pc {

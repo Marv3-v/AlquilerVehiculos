@@ -77,12 +77,6 @@ body {
   display: none;
 }
 
-.navbar-start > .perfil {
-  diplay: flex;
-  justify-content: space-around;
-  flex-direction: column;
-}
-
 .navbar-start > .perfil img {
   border-radius: 70%;
   margin-left: 9%;
@@ -125,7 +119,7 @@ body {
 
   .grid {
     display: grid;
-    grid-template-columns: 22% 1fr;
+    grid-template-columns: 25% 1fr;
   }
 
   .item-pc {
@@ -206,12 +200,46 @@ body {
   margin: 10px;
   font-family: "MontRegular";
   color: white;
+  text-align: center;
+}
+
+.air {
   background: #568CB8;
+}
+
+.earth {
+  background-color: #B35C59;
+}
+
+.sea {
+  background-color: #7DC5FF;
 }
 
 .container {
   margin-left: 10%;
   margin-right: 10%;
+}
+
+.is-rounded {
+  border-radius: 20px;
+}
+
+.is-top-rounded {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+.volver {
+  margin-left: 90%;
+  margin-top: -20px;
+}
+
+.volver:hover {
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 768px) {
@@ -223,12 +251,15 @@ body {
     margin: 10px;
     font-family: "MontRegular";
     color: white;
-    background: #568CB8;
   }
 
   .container {
-    margin-left: 32%;
-    margin-right: 32%;
+    margin-left: 30%;
+    margin-right: 30%;
+  }
+
+  .volver {
+    margin-left: 140%;
   }
 }
 

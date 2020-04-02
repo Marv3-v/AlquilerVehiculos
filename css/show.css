@@ -1,0 +1,50 @@
+.content {
+  width: 80%;
+  margin-left: 10%;
+  text-align: center;
+}
+
+.content > p {
+  text-align: justify;
+}
+
+.content > img {
+  height: 400px;
+}
+
+.rentar {
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 20px;
+}
+@media only screen and (min-width: 768px) {
+  .rentar {
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+.rentar:hover {
+  cursor: pointer;
+}
+
+.aire {
+  background: #568CB8;
+  color: white;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .content > img {
+    height: 900px;
+  }
+}
+
+/*# sourceMappingURL=show.css.map */
