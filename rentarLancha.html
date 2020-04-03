@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bulma.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/seccion.css">
+    <link rel="stylesheet" href="css/show.css">
+</head>
+
+<body style="background-color: #F1F1F1">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+
+        <div class="navbar-brand">
+            <a class="navbar-item" id="logo" href="index.html">
+                YO RENTO
+            </a>
+
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <div class="perfil">
+                    <img src="img/profile.jpg" alt="profile-picture" style="width: 50px">
+                    <span>Marv3</span>
+                </div>
+                <a class="navbar-item">
+                    Mis rentas
+                </a>
+
+                <a class="navbar-item" href="index.html">
+                    Inicio
+                </a>
+                <a class="navbar-item" href="rentaGeneral.html">
+                    Rentar
+                </a>
+                <a class="navbar-item" href="contact.html">
+                    Quienes somos
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div class="grid">
+        <div class="item-pc">
+            <h1 onclick="location.href='index.html'">
+                <a>
+                    YO RENTO
+                </a></h1>
+            <nav class="menu">
+                <div class="perfil">
+                    <img src="img/profile.jpg" alt="profile-picture" style="width: 50px">
+                    <span>Marv3</span>
+                </div>
+                <br>
+                <ul>
+                    <li onclick="location.href='#'">
+                        <div></div>
+                        Mis Rentas
+                    </li>
+                    <li onclick="location.href='index.html'">
+                        <div></div>
+                        Inicio
+                    </li>
+                    <li onclick="location.href='rentaGeneral.html'">
+                        <div class="activo"></div>
+                        Rentar
+                    </li>
+                    <li onclick="location.href='contact.html'">
+                        <div></div>
+                        Quienes somos
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="container">
+            <span class="volver" onclick="location.href='lanchaShow.html'">Volver</span>
+
+            <div class="seccion air has-text-centered">Llene sus condiciones</div>
+            <br>
+            <div class="content" style="text-align: left; font-weight: normal;">
+
+                <div class="field">
+                    <label class="label">Año</label>
+                    <div class="control">
+                        <div class="select is-fullwidth is-rounded">
+                            <select id="anio">
+                                <option class="is-rounded" disabled>Seleccione un año</option>
+                                <option value="2010" selected>2010</option>
+                                <option value="2011">2011</option>
+                                <option value="2012">2012</option>
+                                <option value="2013">2013</option>
+                                <option value="2014">2014</option>
+                                <option value="2015">2015</option>
+                                <option value="2016">2016</option>
+                                <option value="2017">2017</option>
+                                <option value="2018">2018</option>
+                                <option value="2019">2019</option>
+                                <option value="2020">2020</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Motor</label>
+                    <div class="control">
+                        <div class="select is-fullwidth is-rounded">
+                            <select id="motor">
+                                <option class="is-rounded" disabled>Seleccione tipo motor</option>
+                                <option value="A" selected>A</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Cant. de personas</label>
+                    <div class="control">
+                        <input class="input is-rounded" maxlength="1" value='1' id='cant' type="number" placeholder="Cant.">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Color</label>
+                    <div class="control">
+                        <div class="select is-fullwidth is-rounded">
+                            <select id="color">
+                                <option class="is-rounded" disabled>Seleccione el color</option>
+                                <option value="AMARILLO" selected>AMARILLO</option>
+                                <option value="ROJO">ROJO</option>
+                                <option value="AZUL">AZUL</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Formato de Tiempo</label>
+                    <div class="control">
+                        <div class="select is-fullwidth is-rounded">
+                            <select id="formato">
+                                <option class="is-rounded">Seleccione el formato</option>
+                                <option value="hora" selected>Horas</option>
+                                <option value="dia">Días</option>
+                                <option value="semana">Semanas</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Plazo</label>
+                    <div class="control">
+                        <input value="5" class="input is-rounded" id='plazo' type="number" placeholder="Plazo.">
+                    </div>
+                </div>
+                <div class="field" style="text-align: center;">
+                    <p class="control" style="text-align: center;">
+                        <button class="button is-success" id='rentarL' style="text-align: center;">
+                            Rentar
+                        </button>
+                    </p>
+                </div>
+
+                <br><br>
+            </div>
+        </div>
+        <input type="hidden" id="medioT">
+        <input type="hidden" id="tipoV">
+    </div>
+    </div>
+    <!-- modal -->
+    <script src="js/script.js"></script>
+    <script>
+            function rentarLancha() {
+                let ve = new Vehiculo('Maritimo',
+                    'Lancha',
+                    document.querySelector('#anio').value,
+                    document.querySelector('#motor').value,
+                    parseInt(document.querySelector('#cant').value),
+                    document.querySelector('#color').value,
+                    document.querySelector('#formato').value,
+                    parseInt(document.querySelector('#plazo').value),
+                    3200
+                                        );
+        localStorage.setItem('Lancha', JSON.stringify(ve));
+        window.location.href = '/detalleRentaLancha.html';
+        }
+
+document.querySelector('#rentarL').addEventListener('click', rentarLancha);
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // Get all "navbar-burger" elements
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            // Check if there are any navbar burgers
+            if ($navbarBurgers.length > 0) {
+
+                // Add a click event on each of them
+                $navbarBurgers.forEach(el => {
+                    el.addEventListener('click', () => {
+
+                        // Get the target from the "data-target" attribute
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+
+                        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+
+                    });
+                });
+            }
+
+        });
+    </script>
+</body>
+
+</html>

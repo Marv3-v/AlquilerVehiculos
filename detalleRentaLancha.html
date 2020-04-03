@@ -81,24 +81,52 @@
                 </ul>
             </nav>
         </div>
-        <div class="lal">
         <div class="container">
-            <span class="volver" onclick="location.href='maritimo.html'">Volver</span>
+            <span class="volver" onclick="location.href='rentarLancha.html'">Volver</span>
 
-            <div class="seccion mar has-text-centered">Botes</div>
+            <div class="seccion air has-text-centered">Detalle de su renta</div>
             <br>
-        </div>
-        <div class="content">
-            <p>Ahora podrás disfrutar de un inolvidable vaije en bote y apreciar las hermosas aguas de Guatemala. No
-                te pierdas esta experiencia única en la vida.</p>
+            <div class="" style="text-align: left; color: black; font-weight: normal;">
+                <p><b>Medio Transporte:</b> <span id="medioDetalle"></span></p>
+                <p><b>Tipo de vehiculo:</b> <span id="tipoDetalle"></span></p>
+                <p><b>Año:</b> <span id="anioDetalle"></span></p>
+                <p><b>Motor:</b> <span id="motorDetalle"></span></p>
+                <p><b>Cant. de personas:</b> <span id="cantDetalle"></span></p>
+                <p><b>Color:</b> <span id="colorDetalle"></span></p>
+                <p><b>Formato:</b> <span id="formatoDetalle"></span></p>
+                <p><b>Plazo:</b> <span id="plazoDetalle"></span></p>
+                <p><b>Precio:</b> Q.<span id="precioDetalle"></span> </p>
 
-                <img src="img/3.png" alt=""><br><br>
-                <span class="rentar mar"  onclick="location.href='rentarBote.html'">Rentar</span>
+                <div class="field" style="text-align: center;">
+                    <p class="control" style="text-align: center;">
+                        <button class="button is-success" onclick="location.href='index.html'"
+                            style="text-align: center;">
+                            Hecho
+                        </button>
+                    </p>
+                </div>
                 <br><br>
-        </div>
+            </div>
         </div>
     </div>
     </div>
+    <!-- modal -->
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var objetoo = localStorage.getItem('Lancha');
+            var vehiculo = JSON.parse(objetoo);
+            document.querySelector('#medioDetalle').append(vehiculo.medio);
+            document.querySelector('#tipoDetalle').append(vehiculo.tipo);
+            document.querySelector('#anioDetalle').append(vehiculo.anio);
+            document.querySelector('#motorDetalle').append(vehiculo.motor);
+            document.querySelector('#cantDetalle').append(vehiculo.cantP);
+            document.querySelector('#colorDetalle').append(vehiculo.color);
+            document.querySelector('#formatoDetalle').append(vehiculo.formato);
+            document.querySelector('#plazoDetalle').append(vehiculo.plazo);
+            document.querySelector('#precioDetalle').append(vehiculo.precio);
+        })
+    </script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
 
