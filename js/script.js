@@ -61,7 +61,8 @@ document.querySelector('#globo').addEventListener("click", function () {
 document.querySelector('#helicoptero').addEventListener("click", function () {
     localStorage.setItem("Aereo", "Helicoptero");
     localStorage.setItem('info', 'Ahora podrás disfrutar de un inolvidable vuelo en helicóptero y apreciar diferentes panoramas desde la altura.No te pierdas esta experiencia única en la vida.');
-    window.location.href = "aereoShow.html";
+    window.location.href + "/aereoShow.html";
+    // window.location.href = "aereoShow.html";
 });
 document.querySelector('#avion').addEventListener("click", function () {
     localStorage.setItem("Aereo", "Aeronave");
