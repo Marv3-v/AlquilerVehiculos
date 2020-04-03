@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/bulma.css">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/seccion.css">
     <link rel="stylesheet" href="css/show.css">
 </head>
@@ -63,7 +62,7 @@
                 <br>
                 <ul>
                     <li onclick="location.href='misRentas.html'">
-                        <div></div>
+                        <div class="activo"></div>
                         Mis Rentas
                     </li>
                     <li onclick="location.href='index.html'">
@@ -82,51 +81,56 @@
             </nav>
         </div>
         <div class="container">
-            <span class="volver" onclick="location.href='rentarCarro.html'">Volver</span>
+            <span class="volver" onclick="location.href='index.html'">Volver</span>
 
-            <div class="seccion air has-text-centered">Detalle de su renta</div>
-            <br>
-            <div class="" style="text-align: left; color: black; font-weight: normal;">
-                <p><b>Medio Transporte:</b> <span id="medioDetalle"></span></p>
-                <p><b>Tipo de vehiculo:</b> <span id="tipoDetalle"></span></p>
-                <p><b>Año:</b> <span id="anioDetalle"></span></p>
-                <p><b>Motor:</b> <span id="motorDetalle"></span></p>
-                <p><b>Cant. de personas:</b> <span id="cantDetalle"></span></p>
-                <p><b>Color:</b> <span id="colorDetalle"></span></p>
-                <p><b>Formato:</b> <span id="formatoDetalle"></span></p>
-                <p><b>Plazo:</b> <span id="plazoDetalle"></span></p>
-                <p><b>Precio:</b> Q.<span id="precioDetalle"></span> </p>
-
-                <div class="field" style="text-align: center;">
-                    <p class="control" style="text-align: center;">
-                        <button class="button is-success" onclick="location.href='index.html'"
-                            style="text-align: center;">
-                            Hecho
-                        </button>
-                    </p>
+            <div class="seccion title has-text-centered" style="color: #B35C59;">Mis Rentas</div> 
+           
+            <div class="card is-rounded">
+                <div class="card-content">
+                    <div class="content">
+                        <div class="" style="text-align: left; color: black; font-weight: normal;">
+                            <p><b>Medio Transporte:</b> <span>Terrestre</span></p>
+                            <p><b>Tipo de vehiculo:</b> <span>Automóvil</span></p>
+                            <p><b>Año:</b> <span>2020</span></p>
+                            <p><b>Motor:</b> <span>A</span></p>
+                            <p><b>Cant. de personas:</b> <span>5</span></p>
+                            <p><b>Color:</b> <span>Blanco</span></p>
+                            <p><b>Formato:</b> <span>Semanas</span></p>
+                            <p><b>Plazo:</b> <span>4</span></p>
+                            <p><b>Precio:</b> Q.<span>2000</span> </p>
+                        
+                            <br>
+                        </div>
+                    </div>
                 </div>
-                <br><br>
             </div>
+            <br>
+            <br>
+            <br>
+            <div class="card is-rounded" >                    
+                <div class="card-content">
+                        <div class="content">
+                            <div class="" style="text-align: left; color: black; font-weight: normal;">
+                                <p><b>Medio Transporte:</b> <span>Terrestre</span></p>
+                                <p><b>Tipo de vehiculo:</b> <span>Bici</span></p>
+                                <p><b>Año:</b> <span>2018</span></p>
+                                <p><b>Motor:</b> <span>A</span></p>
+                                <p><b>Cant. de personas:</b> <span>1</span></p>
+                                <p><b>Color:</b> <span>Blanco</span></p>
+                                <p><b>Formato:</b> <span>Semanas</span></p>
+                                <p><b>Plazo:</b> <span>2</span></p>
+                                <p><b>Precio:</b> Q.<span>200</span> </p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+            
         </div>
     </div>
     </div>
     <!-- modal -->
     <script src="js/script.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var objetoo = localStorage.getItem('Carro');
-            var vehiculo = JSON.parse(objetoo);
-            document.querySelector('#medioDetalle').append(vehiculo.medio);
-            document.querySelector('#tipoDetalle').append(vehiculo.tipo);
-            document.querySelector('#anioDetalle').append(vehiculo.anio);
-            document.querySelector('#motorDetalle').append(vehiculo.motor);
-            document.querySelector('#cantDetalle').append(vehiculo.cantP);
-            document.querySelector('#colorDetalle').append(vehiculo.color);
-            document.querySelector('#formatoDetalle').append(vehiculo.formato);
-            document.querySelector('#plazoDetalle').append(vehiculo.plazo);
-            document.querySelector('#precioDetalle').append(vehiculo.precio);
-        })
-    </script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
 

@@ -33,7 +33,7 @@
                     <img src="img/profile.jpg" alt="profile-picture" style="width: 50px">
                     <span>Marv3</span>
                 </div>
-                <a class="navbar-item">
+                <a class="navbar-item" href="misRentas.html">
                     Mis rentas
                 </a>
 
@@ -62,7 +62,7 @@
                 </div>
                 <br>
                 <ul>
-                    <li onclick="location.href='#'">
+                    <li onclick="location.href='misRentas.html'">
                         <div></div>
                         Mis Rentas
                     </li>
@@ -82,20 +82,30 @@
             </nav>
         </div>
         <div class="container">
-            <span class="volver" onclick="location.href='index.html'">Volver</span>
+            <span class="volver" onclick="location.href='rentaGeneral.html'">Volver</span>
 
             <div class="seccion air has-text-centered">Detalle de su renta</div>
             <br>
             <div class="content" style="text-align: left; color: black; font-weight: normal;">
+                <div class="" style="text-align: left; color: black; font-weight: normal;">
+                    <p><b>Medio Transporte:</b> <span id="medioDetalle"></span></p>
+                    <p><b>Tipo de vehiculo:</b> <span id="tipoDetalle"></span></p>
+                    <p><b>Año:</b> <span id="anioDetalle"></span></p>
+                    <p><b>Motor:</b> <span id="motorDetalle"></span></p>
+                    <p><b>Cant. de personas:</b> <span id="cantDetalle"></span></p>
+                    <p><b>Color:</b> <span id="colorDetalle"></span></p>
+                    <p><b>Formato:</b> <span id="formatoDetalle"></span></p>
+                    <p><b>Plazo:</b> <span id="plazoDetalle"></span></p>
+                    <p><b>Precio:</b> Q.<span id="precioDetalle"></span> </p>
                 
-                <div class="field" style="text-align: center;">
-                    <p class="control" style="text-align: center;">
-                        <span class="title" >Buena renta</span>
-                        <button class="button is-success" onclick="location.href='index.html'"
-                            style="text-align: center;">
-                            Hecho
-                        </button>
-                    </p>
+                    <div class="field" style="text-align: center;">
+                        <p class="control" style="text-align: center;">
+                            <button class="button is-success" onclick="location.href='index.html'" style="text-align: center;">
+                                Hecho
+                            </button>
+                        </p>
+                    </div>
+                    <br><br>
                 </div>
                 <br><br>
             </div>
@@ -106,7 +116,7 @@
     <script src="js/script.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            var objetoo = localStorage.getItem('Objeto');
+            var objetoo = localStorage.getItem('ObjetoDetalle');
             var vehiculo = JSON.parse(objetoo);
             document.querySelector('#medioDetalle').append(vehiculo.medio);
             document.querySelector('#tipoDetalle').append(vehiculo.tipo);

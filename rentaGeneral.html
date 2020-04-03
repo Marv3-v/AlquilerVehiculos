@@ -33,7 +33,7 @@
                     <img src="img/profile.jpg" alt="profile-picture" style="width: 50px">
                     <span>Marv3</span>
                 </div>
-                <a class="navbar-item">
+                <a class="navbar-item" href="misRentas.html">
                     Mis rentas
                 </a>
 
@@ -62,7 +62,7 @@
                 </div>
                 <br>
                 <ul>
-                    <li onclick="location.href='#'">
+                    <li onclick="location.href='misRentas.html'">
                         <div></div>
                         Mis Rentas
                     </li>
@@ -93,9 +93,9 @@
                         <div class="select is-fullwidth is-rounded">
                             <select id="medio" onchange="agregar()">
                                 <option class="is-rounded" >Seleccione el medio</option>
-                                <option value="1" selected>Aéreo</option>
-                                <option value="2">Terrestre</option>
-                                <option value="3">Marítimo</option>
+                                <option value="Aéreo" selected>Aéreo</option>
+                                <option value="Terrestre">Terrestre</option>
+                                <option value="Marítimo">Marítimo</option>
                             </select>
                         </div>
                     </div>
@@ -205,11 +205,11 @@
             var x = document.getElementById("medio");
             var y = document.getElementById("tipoTransporte");
             console.log(y);
-            if(x.value == '1') {
+            if(x.value == 'Aéreo') {
                   y.innerHTML = "<option value='Globo Aeróstatico'>Globo Aeróstatico</option>" +
                                 "<option value='Helicópteros'>Helicópteros</option>" +
                                 "<option value='Aeronaves'>Aeronaves</option>";
-            } else if(x.value == '2') {
+            } else if(x.value == 'Terrestre') {
                  y.innerHTML = "<option value='Moto'>Moto</option>" +
                     "<option value='Bici'>Bici</option>" +
                     "<option value='Carro'>Carro</option>";
@@ -221,6 +221,17 @@
     </script>
     <script>
         function rentarGeneral() {
+             let ve = new Vehiculo(document.getElementById("medio").value,
+                document.getElementById("tipoTransporte").value,
+                document.querySelector('#anio').value,
+                document.querySelector('#motor').value,
+                parseInt(document.querySelector('#cant').value),
+                document.querySelector('#color').value,
+                document.querySelector('#formato').value,
+                parseInt(document.querySelector('#plazo').value),
+                5200
+            );
+            localStorage.setItem('ObjetoDetalle', JSON.stringify(ve));
             window.location.href='/detalleGeneral.html';
             
         }
