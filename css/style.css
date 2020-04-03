@@ -1,25 +1,25 @@
 @font-face {
   font-family: "Hansief";
-  src: url("./fonts/Hansief.otf");
-  src: url("./fonts/hansief-webfont.woff2") format("woff2");
-  src: url("./fonts/hansief-webfont.woff") format("woff");
+  src: url("./css/fonts/Hansief.otf");
+  src: url("./css/fonts/hansief-webfont.woff2") format("woff2");
+  src: url("./css/fonts/hansief-webfont.woff") format("woff");
 }
 @font-face {
   font-family: "MontRegular";
-  src: url("./fonts/Montserrat-Regular.otf");
+  src: url("./css/fonts/Montserrat-Regular.otf");
 }
 @font-face {
   font-family: "MontBold";
-  src: url("./fonts/Montserrat-Bold.otf");
+  src: url("./css/fonts/Montserrat-Bold.otf");
 }
 #logo {
-  font-family: "Hansief";
+  font-family: "Hansief", Arial, Helvetica, sans-serif;
   font-size: 25px;
   color: #B35C59;
 }
 
 .contenedor > .hero > h1 {
-  font-family: "MontBold";
+  font-family: "MontBold", Arial, Helvetica, sans-serif;
   color: #FF9D9A;
   font-size: 18px;
 }
@@ -35,12 +35,12 @@
 }
 
 body {
-  font-family: "MontRegular" !important;
+  font-family: "MontRegular", Arial, Helvetica, sans-serif !important;
   height: 100vh;
 }
 
 .categorias {
-  font-family: "MontRegular";
+  font-family: "MontRegular", Arial, Helvetica, sans-serif;
   color: white;
   display: flex;
   margin-top: 20%;
@@ -94,7 +94,7 @@ body {
 
 @media only screen and (min-width: 768px) {
   .contenedor > .hero h1 {
-    font-family: "MontBold";
+    font-family: "MontBold", Arial, Helvetica, sans-serif;
     font-size: 23px;
   }
 
@@ -108,7 +108,7 @@ body {
   }
 
   .container {
-    font-family: "MontRegular";
+    font-family: "MontRegular", Arial, Helvetica, sans-serif;
     margin-top: 5%;
     font-size: 23px;
   }
@@ -176,7 +176,7 @@ body {
   }
 
   .item-pc > h1 {
-    font-family: "MontBold";
+    font-family: "MontBold", Arial, Helvetica, sans-serif;
     font-size: 23px;
     text-align: center;
     margin-top: 15%;
