@@ -45,7 +45,7 @@ var Vehiculo = /** @class */ (function (_super) {
 function rentar() {
     var ve = new Vehiculo(localStorage.getItem('medioTransporte'), localStorage.getItem('Aereo'), document.querySelector('#anio').value, document.querySelector('#motor').value, parseInt(document.querySelector('#cant').value), document.querySelector('#color').value, document.querySelector('#formato').value, parseInt(document.querySelector('#plazo').value), 1200);
     localStorage.setItem('Objeto', JSON.stringify(ve));
-    window.location.href = '/detalle.html';
+    window.location.href = 'detalle.html';
 }
 document.addEventListener("DOMContentLoaded", function (event) {
     document.querySelector('.dato').innerHTML = localStorage.getItem("Aereo");

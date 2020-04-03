@@ -55,7 +55,7 @@ function rentar() {
                             1200
                             );
     localStorage.setItem('Objeto', JSON.stringify(ve));
-    window.location.href = '/detalle.html';
+    window.location.href = 'detalle.html';
 }
 
 
