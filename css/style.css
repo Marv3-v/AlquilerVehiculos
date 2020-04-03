@@ -1,20 +1,17 @@
 @font-face {
   font-family: "Hansief";
-  src: url("/fonts/Hansief.otf");
-  src: url("/fonts/hansief-webfont.woff2") format("woff2");
-  src: url("/fonts/hansief-webfont.woff") format("woff");
+  src: url("./fonts/Hansief.otf");
+  src: url("./fonts/hansief-webfont.woff2") format("woff2");
+  src: url("./fonts/hansief-webfont.woff") format("woff");
 }
-
 @font-face {
   font-family: "MontRegular";
-  src: url("/fonts/Montserrat-Regular.otf");
+  src: url("./fonts/Montserrat-Regular.otf");
 }
-
 @font-face {
   font-family: "MontBold";
-  src: url("/fonts/Montserrat-Bold.otf");
+  src: url("./fonts/Montserrat-Bold.otf");
 }
-
 #logo {
   font-family: "Hansief";
   font-size: 25px;
@@ -45,17 +42,10 @@ body {
 .categorias {
   font-family: "MontRegular";
   color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-top: 20%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .cat {
@@ -64,18 +54,11 @@ body {
   margin: 10px;
 }
 
-@-webkit-keyframes notice-me {
-  100% {
-    background-color: #FF9D9A;
-  }
-}
-
 @keyframes notice-me {
   100% {
     background-color: #FF9D9A;
   }
 }
-
 .cat:hover {
   cursor: pointer;
   background-color: #FF9D9A;
@@ -83,20 +66,17 @@ body {
 
 .aereo {
   background: #568CB8;
-  -webkit-animation: .3s notice-me;
-          animation: .3s notice-me;
+  animation: 0.3s notice-me;
 }
 
 .terrestre {
   background: #B35C59;
-  -webkit-animation: .6s notice-me;
-          animation: .6s notice-me;
+  animation: 0.6s notice-me;
 }
 
 .maritimo {
   background: #7DC5FF;
-  -webkit-animation: .8s notice-me;
-          animation: .8s notice-me;
+  animation: 0.8s notice-me;
 }
 
 .grid {
@@ -117,99 +97,110 @@ body {
     font-family: "MontBold";
     font-size: 23px;
   }
+
   .contenedor > .hero h1:hover {
     cursor: pointer;
   }
+
   .contenedor {
     margin-left: 5%;
     margin-right: 5%;
   }
+
   .container {
     font-family: "MontRegular";
     margin-top: 5%;
     font-size: 23px;
   }
+
   .navbar {
     display: none;
   }
+
   .categorias {
     margin-top: 10%;
     font-size: 20px;
   }
+
   .grid > .item-pc {
     display: block;
     background-color: white;
   }
+
   .grid {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 25% 1fr;
-        grid-template-columns: 25% 1fr;
+    grid-template-columns: 25% 1fr;
   }
+
   .item-pc {
-    -webkit-box-shadow: 0px 0px 10px #888888;
-            box-shadow: 0px 0px 10px #888888;
+    box-shadow: 0px 0px 10px #888888;
   }
+
   .menu > ul > li {
     padding: 1em 0em 1em 2em;
   }
+
   .menu > ul > li:hover {
     color: black;
   }
+
   .menu > ul > li {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
+
   .menu > ul > li > .activo {
     background: #568CB8;
     padding-left: 1em;
-    padding-right: .5em;
+    padding-right: 0.5em;
     margin: 5px;
     font-weight: bold;
   }
+
   .menu > ul > li {
     margin: -5px;
   }
+
   .menu > ul > li:hover {
     cursor: pointer;
     background-color: #fafafa;
   }
+
   .menu > ul > li:hover div {
     background: #568CB8;
     padding-left: 1em;
-    padding-right: .5em;
+    padding-right: 0.5em;
     margin: 5px;
     width: 25px;
     cursor: pointer;
-    -webkit-transition: margin .5s;
-    transition: margin .5s;
+    transition: margin 0.5s;
   }
+
   .item-pc > h1 {
     font-family: "MontBold";
     font-size: 23px;
     text-align: center;
     margin-top: 15%;
   }
+
   .item-pc > h1 > a {
     color: #B35C59;
   }
+
   .item-pc > .menu > .perfil > img {
     border-radius: 70%;
     margin-left: 9%;
   }
+
   .item-pc > .menu > .perfil {
     diplay: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    justify-content: space-around;
+    flex-direction: column;
   }
+
   .item-pc > .menu > .perfil > span {
     margin-left: 10%;
     padding-top: -20px;
   }
 }
+
 /*# sourceMappingURL=style.css.map */
