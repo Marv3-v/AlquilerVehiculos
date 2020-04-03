@@ -82,7 +82,7 @@
             </nav>
         </div>
         <div class="container">
-            <span class="volver" onclick="location.href='terrestreShow.html'">Volver</span>
+            <span class="volver" onclick="location.href='carroShow.html'">Volver</span>
 
             <div class="seccion air has-text-centered">Llene sus condiciones</div>
             <br>
@@ -162,7 +162,7 @@
                 </div>
                 <div class="field" style="text-align: center;">
                     <p class="control" style="text-align: center;">
-                        <button class="button is-success" id='rentarMoto' style="text-align: center;">
+                        <button class="button is-success" id='rentarCar' style="text-align: center;">
                             Rentar
                         </button>
                     </p>
@@ -178,22 +178,22 @@
     <!-- modal -->
     <script src="js/script.js"></script>
     <script>
-            function rentaMotocicleta() {
+            function rentarCarro() {
                 let ve = new Vehiculo('Terrestre',
-                    'Motocicleta',
+                    'Carro',
                     document.querySelector('#anio').value,
                     document.querySelector('#motor').value,
                     parseInt(document.querySelector('#cant').value),
                     document.querySelector('#color').value,
                     document.querySelector('#formato').value,
                     parseInt(document.querySelector('#plazo').value),
-                    500
+                    2000
                                         );
-        localStorage.setItem('Moto', JSON.stringify(ve));
-        window.location.href = '/detalleRentaMoto.html';
+        localStorage.setItem('Carro', JSON.stringify(ve));
+        window.location.href = '/detalleRentaCarro.html';
         }
 
-document.querySelector('#rentarMoto').addEventListener('click', rentaMotocicleta);
+document.querySelector('#rentarCar').addEventListener('click', rentarCarro);
     </script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {

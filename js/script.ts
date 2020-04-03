@@ -1,7 +1,7 @@
 class MedioTransporte {
     medio: string;
     tipo: string;
-    constructor(medio, tipo) { 
+    constructor(medio: string, tipo:string) { 
         this.medio = medio;
         this.tipo = tipo;
     }
@@ -24,9 +24,10 @@ class Vehiculo extends MedioTransporte {
     color: string;
     formato: string;
     plazo: number;
+    precio: number;
     //
     constructor(medio: string, tipo: string, anio: string, motor: string, cantP: number,
-                color: string, formato: string, plazo: number) {
+                color: string, formato: string, plazo: number, precio: number) {
         super(medio, tipo);
         this.anio = anio;
         this.motor = motor;
@@ -35,6 +36,7 @@ class Vehiculo extends MedioTransporte {
         this.color = color;
         this.formato = formato;
         this.plazo = plazo;
+        this.precio = precio;
     }
 
 }
@@ -50,7 +52,8 @@ function rentar() {
                             (<HTMLSelectElement>document.querySelector('#color')).value,
                             (<HTMLSelectElement>document.querySelector('#formato')).value,
                             parseInt((<HTMLSelectElement>document.querySelector('#plazo')).value),
-    );
+                            1200
+                            );
     localStorage.setItem('Objeto', JSON.stringify(ve));
     window.location.href = '/detalle.html';
 }
