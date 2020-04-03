@@ -12,11 +12,11 @@ class MedioTransporte {
 
 }
 
-//const terrestre = new MedioTransporte('Terrestre');
+//const terrestre = new MedioTransporte('Terrestre', 'Carrp');
 //const aereo = new MedioTransporte('Aereo');
 //const maritimo = new MedioTransporte('Maritimo');
 
-//console.log(medio.tipo);
+//console.log(terrestre);
 class Vehiculo extends MedioTransporte {
     anio: string;
     motor: string;
@@ -38,6 +38,8 @@ class Vehiculo extends MedioTransporte {
     }
 
 }
+
+
 
 function rentar() {
     let ve = new Vehiculo(localStorage.getItem('medioTransporte'), 

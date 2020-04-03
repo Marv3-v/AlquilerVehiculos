@@ -87,13 +87,14 @@
                 <div class="seccion air has-text-centered">Llene sus condiciones</div>
                 <br>
                 <div class="content" style="text-align: left; font-weight: normal;">
+                
                 <div class="field">
                     <label class="label">Año</label>
                     <div class="control">
                         <div class="select is-fullwidth is-rounded">
                             <select id="anio">
-                                <option class="is-rounded" selected disabled>Seleccione un año</option>
-                                <option value="2010">2010</option>
+                                <option class="is-rounded"  disabled>Seleccione un año</option>
+                                <option value="2010" selected>2010</option>
                                 <option value="2011">2011</option>
                                 <option value="2012">2012</option>
                                 <option value="2013">2013</option>
@@ -113,8 +114,8 @@
                     <div class="control">
                         <div class="select is-fullwidth is-rounded">
                             <select id="motor">
-                                <option class="is-rounded" selected disabled>Seleccione tipo motor</option>
-                                <option value="A">A</option>
+                                <option class="is-rounded"  disabled>Seleccione tipo motor</option>
+                                <option value="A" selected>A</option>
                                 <option value="B">B</option>
                                 <option value="C">C</option>
                             </select>
@@ -124,7 +125,7 @@
                     <div class="field">
                         <label class="label">Cant. de personas</label>
                         <div class="control">
-                            <input class="input is-rounded" id='cant' type="number" placeholder="Cant.">
+                            <input class="input is-rounded" value='1' id='cant' type="number" placeholder="Cant.">
                         </div>
                     </div>
                     <div class="field">
@@ -132,8 +133,8 @@
                         <div class="control">
                             <div class="select is-fullwidth is-rounded">
                                 <select id="color">
-                                    <option class="is-rounded" selected disabled>Seleccione el color</option>
-                                    <option value="AMARILLO">AMARILLO</option>
+                                    <option class="is-rounded"  disabled>Seleccione el color</option>
+                                    <option value="AMARILLO" selected>AMARILLO</option>
                                     <option value="ROJO">ROJO</option>
                                     <option value="AZUL">AZUL</option>
                                 </select>
@@ -146,7 +147,7 @@
                             <div class="select is-fullwidth is-rounded">
                                 <select id="formato">
                                     <option class="is-rounded">Seleccione el formato</option>
-                                    <option value="hora">Horas</option>
+                                    <option value="hora" selected>Horas</option>
                                     <option value="dia">Días</option>
                                     <option value="semana">Semanas</option>
                                 </select>
@@ -156,7 +157,7 @@
                     <div class="field">
                         <label class="label">Plazo</label>
                         <div class="control">
-                            <input class="input is-rounded" id='plazo' type="number" placeholder="Plazo.">
+                            <input value="5" class="input is-rounded" id='plazo' type="number" placeholder="Plazo.">
                         </div>
                     </div>
                     <div class="field" style="text-align: center;">
@@ -166,6 +167,7 @@
                             </button>
                         </p>
                     </div>
+                    
                     <br><br>
                 </div>
             </div>
@@ -175,9 +177,7 @@
     </div>
     <!-- modal -->
     <script src="js/script.js"></script>
-    <script>
-      
-    </script>
+    <script src="js/jquery-3.3.1.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
 
