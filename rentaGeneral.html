@@ -40,6 +40,9 @@
                 <a class="navbar-item" href="index.html">
                     Inicio
                 </a>
+                <a class="navbar-item" href="rentaGeneral.html">
+                    Rentar
+                </a>
                 <a class="navbar-item" href="contact.html">
                     Quienes somos
                 </a>
@@ -79,7 +82,7 @@
             </nav>
         </div>
         <div class="container">
-            <span class="volver" onclick="location.href='aereoShow.html'">Volver</span>
+            <span class="volver" onclick="location.href='index.html'">Volver</span>
 
             <div class="seccion air has-text-centered">Llene sus condiciones</div>
             <br>
@@ -184,7 +187,7 @@
                 </div>
                 <div class="field" style="text-align: center;">
                     <p class="control" style="text-align: center;">
-                        <button class="button is-success" onclick="rentar()" style="text-align: center;">
+                        <button class="button is-success" onclick="rentarGeneral()" style="text-align: center;">
                             Rentar
                         </button>
                     </p>
@@ -196,6 +199,7 @@
     </div>
     <!-- modal -->
     <script src="js/script.js"></script>
+    <script src="js/jquery-3.3.1.js"></script>
     <script>
         function agregar() {
             var x = document.getElementById("medio");
@@ -213,6 +217,12 @@
                 y.innerHTML = "<option value='Bote'>Bote</option>" +
                     "<option value='Lancha'>Lancha</option>";
             }
+        }
+    </script>
+    <script>
+        function rentarGeneral() {
+            window.location.href='/detalleGeneral.html';
+            
         }
     </script>
     <script>
