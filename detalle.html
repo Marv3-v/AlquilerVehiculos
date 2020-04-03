@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/bulma.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/seccion.css">
+    <link rel="stylesheet" href="css/show.css">
 </head>
 
 <body style="background-color: #F1F1F1">
@@ -74,59 +75,49 @@
             </nav>
         </div>
         <div class="container">
-            <div class="seccion air has-text-centered">AÉREO</div>
+            <span class="volver" onclick="location.href='rentar.html'">Volver</span>
+
+            <div class="seccion air has-text-centered">Detalle de su renta</div>
             <br>
-            <br>
-            <!-- CARDS -->
-            <input type="hidden" value="Globo Aeróstatico" id="globoValue">
-            <input type="hidden" value="Helicóptero" id="helicopteroValue">
-            <div class="tipos">
-                <div class="card is-rounded" id="globo">
-                    <div class="card-image">
-                        <figure class="image">
-                            <img class="is-top-rounded" src="img/ballon1.jpg" alt="Placeholder image">
-                        </figure>
-                    </div>
-                    <div class="card-content">
-                        <div class="content">
-                            <p class="title is-4 has-text-centered">Globos aerostáticos</p>
-                        </div>
-                    </div>
+            <div class="content" style="text-align: left; color: black; font-weight: normal;">
+                <p><b>Medio Transporte:</b> <span id="medioDetalle"></span></p>
+                <p><b>Tipo de vehiculo:</b> <span id="tipoDetalle"></span></p>
+                <p><b>Año:</b> <span id="anioDetalle"></span></p>
+                <p><b>Motor:</b> <span id="motorDetalle"></span></p>
+                <p><b>Cant. de personas:</b> <span id="cantDetalle"></span></p>
+                <p><b>Color:</b> <span id="colorDetalle"></span></p>
+                <p><b>Formato:</b> <span id="formatoDetalle"></span></p>
+                <p><b>Plazo:</b> <span id="plazoDetalle"></span></p>
+    
+                <div class="field" style="text-align: center;">
+                    <p class="control" style="text-align: center;">
+                        <button class="button is-success" onclick="location.href='index.html'" style="text-align: center;">
+                            Hecho
+                        </button>
+                    </p>
                 </div>
-                <br>
-                <div class="card is-rounded" id="helicoptero">
-                    <div class="card-image">
-                        <figure class="image">
-                            <img class="is-top-rounded" src="img/helicopter1.jpg" alt="Placeholder image">
-                        </figure>
-                    </div>
-                    <div class="card-content">
-                        <div class="content">
-                            <p class="title is-4 has-text-centered">Helicópteros</p>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <div class="card is-rounded" id="avion">
-                    <div class="card-image">
-                        <figure class="image">
-                            <img class="is-top-rounded" src="img/aircraft.jpg" alt="Placeholder image">
-                        </figure>
-                    </div>
-                    <div class="card-content">
-                        <div class="content">
-                            <p class="title is-4 has-text-centered">Aeronáves</p>
-                        </div>
-                    </div>
-                </div>
+                <br><br>
             </div>
-            <br>
-            <br>
-            <br>
         </div>
     </div>
     </div>
+    <!-- modal -->
     <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded',function() {
+            var objetoo = localStorage.getItem('Objeto');
+            var vehiculo =  JSON.parse(objetoo);
+            document.querySelector('#medioDetalle').append(vehiculo.medio);
+            document.querySelector('#tipoDetalle').append(vehiculo.tipo);
+            document.querySelector('#anioDetalle').append(vehiculo.anio);
+            document.querySelector('#motorDetalle').append(vehiculo.motor);
+            document.querySelector('#cantDetalle').append(vehiculo.cantP);
+            document.querySelector('#colorDetalle').append(vehiculo.color);
+            document.querySelector('#formatoDetalle').append(vehiculo.formato);
+            document.querySelector('#plazoDetalle').append(vehiculo.plazo);
+            console.log(vehiculo);
+        })
+    </script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
 

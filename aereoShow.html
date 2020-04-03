@@ -47,6 +47,7 @@
         </div>
     </nav>
     <div class="grid">
+        <input type="hidden" id="medioTransporte">
         <div class="item-pc">
             <h1 onclick="location.href='index.html'">
                 <a>
@@ -78,21 +79,27 @@
         <div class="container">
             <span class="volver" onclick="location.href='aereo.html'">Volver</span>
 
-            <div class="seccion air has-text-centered">Globos Aerostático</div>
+            <div class="seccion air dato has-text-centered"></div>
             <br>
         </div>
         <div class="content">
-            <p>Ahora podrás disfrutar de un inolvidable vuelo en globo aerostático y apreciar diferentes panoramas desde la
-                altura. No
-                te pierdas esta experiencia única en la vida.</p>
+            <p id="texto"></p>
 
                 <img src="img/1.png" alt=""><br><br>
-                <span class="rentar aire" onclick="location.href='rentar.html'">Rentar</span>
+                <span class="rentar aire" id="rentarVehiculo" onclick="paginaRenta()">Rentar</span>
                 <br><br>
         </div>
         </div>
     </div>
     </div>
+    <script src="js/script.js"></script>
+    <script>
+        function paginaRenta() {
+            window.location.href = "/rentar.html";
+            localStorage.setItem('medioTransporte', 'Aereo')
+
+        }
+    </script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
 

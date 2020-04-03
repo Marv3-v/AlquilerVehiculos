@@ -74,12 +74,36 @@
                 </ul>
             </nav>
         </div>
-            <div class="container">
-                <span class="volver" onclick="location.href='aereoShow.html'">Volver</span>
+        <div class="container">
+            <span class="volver" onclick="location.href='aereoShow.html'">Volver</span>
 
-                <div class="seccion air has-text-centered">Llene sus condiciones</div>
-                <br>
-                <div class="content" style="text-align: left; font-weight: normal;">
+            <div class="seccion air has-text-centered">Llene sus condiciones</div>
+            <br>
+            <div class="content" style="text-align: left; font-weight: normal;">
+                <div class="field">
+                    <label class="label">Medio Transporte</label>
+                    <div class="control">
+                        <div class="select is-fullwidth is-rounded">
+                            <select id="medio">
+                                <option class="is-rounded" selected disabled>Seleccione el medio</option>
+                                <option value="1">Aéreo</option>
+                                <option value="2">Terrestre</option>
+                                <option value="3">Marítimo</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Tipo Transporte</label>
+                    <div class="control">
+                        <div class="select is-fullwidth is-rounded">
+                            <select id="tipoTransporte">
+                                <option class="is-rounded" selected disabled>Seleccione el tipo</option>
+                                
+                            </select>
+                        </div>
+                    </div>
+                </div>
                 <div class="field">
                     <label class="label">Año</label>
                     <div class="control">
@@ -114,62 +138,68 @@
                         </div>
                     </div>
                 </div>
-                    <div class="field">
-                        <label class="label">Cant. de personas</label>
-                        <div class="control">
-                            <input class="input is-rounded" id='cant' type="number" placeholder="Cant.">
-                        </div>
+                <div class="field">
+                    <label class="label">Cant. de personas</label>
+                    <div class="control">
+                        <input class="input is-rounded" id='cant' type="number" placeholder="Cant.">
                     </div>
-                    <div class="field">
-                        <label class="label">Color</label>
-                        <div class="control">
-                            <div class="select is-fullwidth is-rounded">
-                                <select id="color">
-                                    <option class="is-rounded" selected disabled>Seleccione el color</option>
-                                    <option value="AMARILLO">AMARILLO</option>
-                                    <option value="ROJO">ROJO</option>
-                                    <option value="AZUL">AZUL</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label class="label">Formato de Tiempo</label>
-                        <div class="control">
-                            <div class="select is-fullwidth is-rounded">
-                                <select id="formato">
-                                    <option class="is-rounded">Seleccione el formato</option>
-                                    <option value="hora">Horas</option>
-                                    <option value="dia">Días</option>
-                                    <option value="semana">Semanas</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label class="label">Plazo</label>
-                        <div class="control">
-                            <input class="input is-rounded" id='plazo' type="number" placeholder="Plazo.">
-                        </div>
-                    </div>
-                    <div class="field" style="text-align: center;">
-                        <p class="control" style="text-align: center;">
-                            <button class="button is-success" onclick="rentar()" style="text-align: center;">
-                                Rentar
-                            </button>
-                        </p>
-                    </div>
-                    <br><br>
                 </div>
+                <div class="field">
+                    <label class="label">Color</label>
+                    <div class="control">
+                        <div class="select is-fullwidth is-rounded">
+                            <select id="color">
+                                <option class="is-rounded" selected disabled>Seleccione el color</option>
+                                <option value="AMARILLO">AMARILLO</option>
+                                <option value="ROJO">ROJO</option>
+                                <option value="AZUL">AZUL</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Formato de Tiempo</label>
+                    <div class="control">
+                        <div class="select is-fullwidth is-rounded">
+                            <select id="formato">
+                                <option class="is-rounded">Seleccione el formato</option>
+                                <option value="hora">Horas</option>
+                                <option value="dia">Días</option>
+                                <option value="semana">Semanas</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Plazo</label>
+                    <div class="control">
+                        <input class="input is-rounded" id='plazo' type="number" placeholder="Plazo.">
+                    </div>
+                </div>
+                <div class="field" style="text-align: center;">
+                    <p class="control" style="text-align: center;">
+                        <button class="button is-success" onclick="rentar()" style="text-align: center;">
+                            Rentar
+                        </button>
+                    </p>
+                </div>
+                <br><br>
             </div>
-            <input type="hidden" id="medioT">
-            <input type="hidden" id="tipoV">
+        </div>
     </div>
     </div>
     <!-- modal -->
     <script src="js/script.js"></script>
     <script>
-      
+        document.querySelector('#medio').onchange(function() {
+            if(document.querySelector('#medio').value == '1') {
+
+            } else if(document.querySelector('#medio').value == '2') {
+
+            } else {
+                
+            }
+        });
     </script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
