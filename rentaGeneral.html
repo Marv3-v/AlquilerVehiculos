@@ -67,6 +67,10 @@
                         <div></div>
                         Inicio
                     </li>
+                    <li onclick="location.href='rentaGeneral.html'">
+                        <div></div>
+                        Rentar
+                    </li>
                     <li onclick="location.href='contact.html'">
                         <div></div>
                         Quienes somos
@@ -84,8 +88,8 @@
                     <label class="label">Medio Transporte</label>
                     <div class="control">
                         <div class="select is-fullwidth is-rounded">
-                            <select id="medio">
-                                <option class="is-rounded" selected disabled>Seleccione el medio</option>
+                            <select id="medio" onchange="agregar()">
+                                <option class="is-rounded" selected>Seleccione el medio</option>
                                 <option value="1">Aéreo</option>
                                 <option value="2">Terrestre</option>
                                 <option value="3">Marítimo</option>
@@ -99,7 +103,9 @@
                         <div class="select is-fullwidth is-rounded">
                             <select id="tipoTransporte">
                                 <option class="is-rounded" selected disabled>Seleccione el tipo</option>
-                                
+                                <option value='Globo Aeróstatico'>Globo Aeróstatico</option>
+                                <option value='Helicópteros'>Helicópteros</option>
+                                <option value='Aeronaves'>Aeronaves</option>
                             </select>
                         </div>
                     </div>
@@ -191,15 +197,23 @@
     <!-- modal -->
     <script src="js/script.js"></script>
     <script>
-        document.querySelector('#medio').onchange(function() {
-            if(document.querySelector('#medio').value == '1') {
-
-            } else if(document.querySelector('#medio').value == '2') {
-
+        function agregar() {
+            var x = document.getElementById("medio");
+            var y = document.getElementById("tipoTransporte");
+            console.log(y);
+            if(x.value == '1') {
+                  y.innerHTML = "<option value='Globo Aeróstatico'>Globo Aeróstatico</option>" +
+                                "<option value='Helicópteros'>Helicópteros</option>" +
+                                "<option value='Aeronaves'>Aeronaves</option>";
+            } else if(x.value == '2') {
+                 y.innerHTML = "<option value='Moto'>Moto</option>" +
+                    "<option value='Bici'>Bici</option>" +
+                    "<option value='Carro'>Carro</option>";
             } else {
-                
+                y.innerHTML = "<option value='Bote'>Bote</option>" +
+                    "<option value='Lancha'>Lancha</option>";
             }
-        });
+        }
     </script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
